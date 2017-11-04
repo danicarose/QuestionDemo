@@ -4,6 +4,12 @@ public class ChoiceQuestion extends Question{
 
 	private ArrayList<String> choices = new ArrayList<String>();
 	
+	public ChoiceQuestion(){
+		super(); //how to call the superclass constructor--typically done as first line 
+		//can result in error if put later in code 			
+		choices = new ArrayList<String>();
+	}
+	
 	public void addChoice(String choice, boolean correct) {
 		// TODO Auto-generated method stub
 		choices.add(choice);
@@ -18,7 +24,8 @@ public class ChoiceQuestion extends Question{
 		super.display();
 		//System.out.println(text);
 		for(int i=0; i<choices.size(); i++){
-			System.out.println("Wat");
+			int choiceNumber = i + 1;
+			System.out.println(choiceNumber + ": " + choices.get(i));
 		}
 	}
 	
