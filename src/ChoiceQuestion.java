@@ -9,12 +9,18 @@ public class ChoiceQuestion extends Question{
 		choices.add(choice);
 		if(correct){
 			String choiceString = "" + choices.size();
-			this.setAnswer(choiceString);
-					
-					
+			this.setAnswer(choiceString);		
 		}
 	}
 	
+	
+	public void display(){
+		super.display();
+		//System.out.println(text);
+		for(int i=0; i<choices.size(); i++){
+			System.out.println("Wat");
+		}
+	}
 	
 
 }
